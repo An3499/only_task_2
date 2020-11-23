@@ -1,0 +1,8 @@
+mixin todoItem(props)
+    .section&attributes(attributes).todo-list
+        each todo, index in dataJson.todos
+            .todo-list__item
+                .todo-list__checkbox
+                    input(type="checkbox", id="todo-input"+index).checkbox__invisible
+                    .checkbox__visible
+                label(for="todo-input"+index).todo-list__text!= todo
